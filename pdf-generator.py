@@ -1,4 +1,5 @@
 import urllib, sys
+import urllib.request
 
 def report(blocknr, blocksize, size):
     current = blocknr*blocksize
@@ -6,14 +7,14 @@ def report(blocknr, blocksize, size):
 
 def downloadFile(url):
     fname = url.split('/')[-1]
-    urllib.urlretrieve(url, fname, report)
-    print "Download starting..."
+    urllib.request.urlretrieve(url, fname, report)
+    print("Download starting...")
     
 tld = "http://www.tutorialspoint.com/"
 #enter any tutorials url name from the website
 #in the future we could scrape and show a menu
-print "Name of Tutorial? "
-query = raw_input()
+print("Name of Tutorial? ")
+query = input()
 url =  tld+query+'/'+query+'_tutorial.pdf'
 downloadFile(url)
-print "\nComplete PDF for " + query + " has been downloaded\n"
+print("\nComplete PDF for " + query + " has been downloaded\n")
