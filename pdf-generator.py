@@ -32,7 +32,7 @@ def downloadFile(url):
         print(f"\n❌ An unexpected error occurred: {e}")
 
 
-tld = "http://www.tutorialspoint.com/"
+tld = "https://www.tutorialspoint.com/"
 print("Name of Tutorial? (e.g., 'python' or 'java')")
 # Use input() instead of raw_input() in Python 3
 query = input().strip().lower() 
