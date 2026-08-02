@@ -1,6 +1,7 @@
 import sys
 import urllib.request
 import urllib.error
+import urllib.parse
 import os
 
 def report(blocknr, blocksize, size):
@@ -11,7 +12,7 @@ def report(blocknr, blocksize, size):
         sys.stdout.write("\r{0:.2f}%".format(100.0 * current / size))
         sys.stdout.flush() # Forces the output to update immediately
 
-def downloadFile(url):
+def downloadFile(url, query):
     """Downloads the file from the given URL with progress reporting."""
     # os.path.basename extracts the filename from the URL
     fname = os.path.basename(urllib.parse.urlparse(url).path)
@@ -41,4 +42,4 @@ query = input().strip().lower()
 url = tld + query + '/' + query + '_tutorial.pdf'
 
 # Start the download process
-downloadFile(url)
+downloadFile(url, query)
