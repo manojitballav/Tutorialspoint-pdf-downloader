@@ -1,5 +1,16 @@
 # Tutorialspoint-pdf-downloader
-Download complete pdf's of Tutorial points tutorials.
+Download the free preview PDF of a tutorialspoint.com tutorial.
+
+## What you get
+Tutorialspoint publishes a free preview PDF for each tutorial — typically around
+30 pages — at `https://www.tutorialspoint.com/<name>/<name>_tutorial.pdf`. That
+is the file this script downloads.
+
+**It is not the complete tutorial.** The preview ends with "End of ebook preview
+— buy it from our store", and the full ebook is a paid product on
+[store.tutorialspoint.com](https://store.tutorialspoint.com). This has always
+been the case; the endpoint has never served complete tutorials, and there is no
+option here to change that.
 
 ## Requirements
 Python 3.6 or newer. No third-party packages — the standard library is enough.
